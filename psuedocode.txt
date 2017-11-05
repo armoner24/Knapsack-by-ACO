@@ -1,0 +1,20 @@
+begin 
+while (a cycle exists) do 
+while (an ant k, which has not yet worked, exists) do 
+while (Vc = 0) do 
+select a next object oj from Ni with probability 
+add a selected object to a partial solution S = S + {oj} 
+update the current knapsack load capacity VC = VC – wj 
+update the profit Z = Z + zj 
+update the neighbourhood of the current state Ni = {oi : wi = VC} 
+end 
+remember the best solution if a better solution has been found 
+end 
+remember a global best solution if a better solution has been found 
+use an evaporation mechanism t = ?t 
+update pheromone trails t = t + ?t 
+end 
+end.
+
+
+

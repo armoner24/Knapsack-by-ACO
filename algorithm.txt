@@ -1,0 +1,35 @@
+procedure ACO Meta heuristic() 
+while (termination criterion not satisfied) 
+		schedule activities 
+ants generation and activity(); 
+pheromone evaporation(); 
+end schedule activities 
+end while 
+end procedure
+procedureants generation and activity() 
+while(available resources) 
+schedule the creation of a new ant(); 
+new active ant(); 
+end while 
+end procedure
+procedure new active ant() fantlifecycleg
+initialize ant(); 
+M = update ant memory(); 
+while (current state 6= target state) 
+A = read local ant-routing table(); 
+P = compute transition probabilities(A; M; problem constraints);
+		next state = apply ant decision policy(P; problem constraints); 
+move to next state(next state);
+if(online step-by-step pheromone update) 
+deposit pheromone on the visited arc(); 
+update ant-routing table(); 
+end if 
+ M = update internal state(); 
+	end while 
+	if(online delayed pheromone update) 
+evaluate solution(); 
+deposit pheromone on all visited arcs(); 
+update ant-routing table(); 
+end if 
+die(); 
+end procedure
